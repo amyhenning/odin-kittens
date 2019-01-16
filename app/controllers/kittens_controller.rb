@@ -4,9 +4,12 @@ class KittensController < ApplicationController
 	end
 
 	def new
+		@kitten = Kitten.new
 	end
 
 	def create
+		@kitten = Kitten.create(kitten_params)
+		redirect_to root_path
 	end
 
 	def edit
@@ -20,5 +23,11 @@ class KittensController < ApplicationController
 	end
 
 	def destroy
+	end
+
+	private
+
+	def kitten_params
+		params.require(:kitten).permit(:name, :age, :softness, :cuteness)
 	end
 end

@@ -1,0 +1,17 @@
+<h1>Add a Kitten!</h1>
+
+<%= form_for @kitten, url: {action: "create"} do |f| %>
+	<%= label_tag(:name, "Kitten's Name:") %>
+	<%= f.text_field :name %>
+	<br />
+	<%= label_tag(:age, "Age:") %>
+	<%= f.number_field :age %>
+	<br />
+	<%= label_tag(:cuteness, "Cuteness:") %>
+	<%= f.number_field :cuteness %>
+	<br />
+	<%= label_tag(:softness, "Softeness:") %>
+	<%= f.number_field :softness %>
+	<br />
+	<%= f.submit "Submit" %>
+<% end %>
