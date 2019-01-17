@@ -9,11 +9,12 @@ class KittensController < ApplicationController
 	end
 
 	def new
+		@action = "create"
+
 		@kitten = Kitten.new
 	end
 
 	def create
-		@action = "create"
 		@kitten = Kitten.create(kitten_params)
 		redirect_to root_path
 	end

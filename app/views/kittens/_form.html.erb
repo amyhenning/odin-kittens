@@ -1,33 +1,85 @@
 <% if @action == "create" %>
 	<%= form_for @kitten, url: {action: "create"} do |f| %>
-		<%= label_tag(:name, "Kitten's Name:") %>
-		<%= f.text_field :name %>
-		<br />
-		<%= label_tag(:age, "Age:") %>
-		<%= f.number_field :age %>
-		<br />
-		<%= label_tag(:cuteness, "Cuteness:") %>
-		<%= f.number_field :cuteness %>
-		<br />
-		<%= label_tag(:softness, "Softness:") %>
-		<%= f.number_field :softness %>
-		<br />
-		<%= f.submit "Submit" %>
+		<div class="row">
+			<div class="left">
+				<%= label_tag(:name, "Kitten's Name:") %>
+			</div>
+			<div class="right">
+				<%= f.text_field :name, class: 'form-box' %>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="left">
+				<%= label_tag(:age, "Age:") %>
+			</div>
+			<div class="right">
+				<%= f.number_field :age, class: 'form-box' %>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="left">
+				<%= label_tag(:cuteness, "Cuteness:") %>
+			</div>
+			<div class="right">
+				<%= f.number_field :cuteness, class: 'form-box' %>
+			</div>
+			</div>
+
+		<div class="row">
+			<div class="left">
+				<%= label_tag(:softness, "Softness:") %>
+			</div>
+			<div class="right">
+				<%= f.number_field :softness, class: 'form-box' %>
+			</div>
+		</div>
+
+		<div class="row">
+			<%= f.submit "Submit", class: 'btn' %>
+		</div>
 	<% end %>
 <% else %>
 	<%= form_for @kitten do |f| %>
-		<%= label_tag(:name, "Kitten's Name:") %>
-		<%= f.text_field :name %>
-		<br />
-		<%= label_tag(:age, "Age:") %>
-		<%= f.number_field :age %>
-		<br />
-		<%= label_tag(:cuteness, "Cuteness:") %>
-		<%= f.number_field :cuteness %>
-		<br />
-		<%= label_tag(:softness, "Softness:") %>
-		<%= f.number_field :softness %>
-		<br />
-		<%= f.submit "Submit" %>
+		<div class="row">
+			<div class="left">
+				<%= label_tag(:name, "Kitten's Name:") %>
+			</div>
+			<div class="right">
+				<%= f.text_field :name, class: 'form-box' %>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="left">
+				<%= label_tag(:age, "Age:") %>
+			</div>
+			<div class="right">
+				<%= f.number_field :age, class: 'form-box' %>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="left">
+				<%= label_tag(:cuteness, "Cuteness:") %>
+			</div>
+			<div class="right">
+				<%= f.number_field :cuteness, class: 'form-box' %>
+			</div>
+			</div>
+
+		<div class="row">
+			<div class="left">
+				<%= label_tag(:softness, "Softness:") %>
+			</div>
+			<div class="right">
+				<%= f.number_field :softness, class: 'form-box' %>
+			</div>
+		</div>
+
+		<div class="row">
+			<%= f.submit "Submit", class: 'btn' %>
+		</div>
 	<% end %>
 <% end %>

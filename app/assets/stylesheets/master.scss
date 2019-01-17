@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+
+body {
+	font-family: "Fira Sans", sans serif;
+	background-color: #058a9b;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #45c9d6;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #45c9d6;
+	text-decoration: underline;
+}
+
+#navbar {
+	background-color: #303741;
+	height: 100px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+#logo {
+	width: 40%;
+	text-align: left;
+	color: #FCFDFF;
+	font-size: 2em;
+}
+
+#nav-links {
+	width: 55%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.nav-link {
+	margin-left: 2em;
+}
+
+#navbar a, #navbar a:hover {
+	color: #FCFDFF;
+	text-decoration: none;
+}
+
+#main {
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.cat-box {
+	width: 50%;
+	min-width: 300px;
+	background-color: #FCFDFF;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	text-align: center;
+	border-radius: 2em;
+	padding: 1em;
+}
+
+#hero {
+	height: 50vh;
+	width: 100%;
+	background: image_url('cats.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.left {
+	text-align: right;
+	width: 40%;
+}
+
+.right {
+	text-align: left;
+	width: 60%;
+}
+
+.form-box {
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid #303741;
+	border-radius: 5px;
+	width: 200px;
+}
+
+.btn {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	height: 30px;
+	width: 75px;
+	border: 1px solid #303741;
+	border-radius: 5px;
+}
+
+.btn:hover {
+	background-color: #45c9d6;
+	cursor: pointer;
+}

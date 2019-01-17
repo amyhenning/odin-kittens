@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OdinKittens</title>
+    <title>Kittens!</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,24 @@
   </head>
 
   <body>
-    <%= yield %>
+  	<navbar id="navbar">
+  		<div id="logo">
+  			<%= link_to 'Kittens!', root_path %>
+  		</div>
+
+  		<div id="nav-links">
+  			<div class="nav-link">
+  				<%= link_to "Add a Kitten", new_kitten_path %>
+  			</div>
+  			<div class="nav-link">
+  				<%= link_to "View Source Code", 'https://github.com/amyhenning/odin-kittens' %>
+  			</div>
+
+  		</div>
+  	</navbar>
+
+  	<main id="main">
+    	<%= yield %>
+  	</main>
   </body>
 </html>
