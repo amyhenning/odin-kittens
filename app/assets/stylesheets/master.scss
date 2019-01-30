@@ -118,3 +118,15 @@ a:hover {
 	background-color: #45c9d6;
 	cursor: pointer;
 }
+
+.destroy {
+	color: #45c9d6;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.destroy:hover {
+	color: #45c9d6;
+	text-decoration: underline;
+	cursor: pointer;
+}

@@ -40,8 +40,12 @@ class KittensController < ApplicationController
 
 	def destroy
 		@kitten = Kitten.find(params[:id])
-		@kitten.destroy
-		redirect_to root_path, notice: 'Kitten deleted'
+		if @kitten.destroy
+			respond_to do |format|
+				format.html {redirect_to :back, notice: "Kitten removed :("}
+				format.js
+			end
+		end
 	end
 
 	private
