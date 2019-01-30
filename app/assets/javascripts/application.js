@@ -14,3 +14,17 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+	$('.destroy').on('click', function() {
+		if(confirm("Are you sure you want to remove this kitten?")){
+			$.ajax({
+				url: '/kittens/' + this.parentElement.id,
+				type: 'DELETE',
+				success: function(r) {
+
+				}
+			});
+		}
+	});
+})
